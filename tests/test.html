@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 Test Page</title>
+<meta name="description" content="HTML5 Custom Web Element Test Page">
+<meta name="author" content="Peter Darmis">
+<style>
+body {
+width: 100%;
+}
+:host {
+display: block;
+}
+pd-bubble:not(:defined) {
+display: none;
+}
+pd-bubble,
+pd-bubble:defined {
+position: sticky;
+width: 20%;
+top: 0;
+z-index: 99999;
+float: right;
+height: auto;
+margin: 2% 5% 0% 70%;
+display: block;
+padding: 0;
+}
+</style>
+</head>
+<body>
+  <pd-bubble speakit="true" delay="3000" text=""></pd-bubble>
+</body>
+</html>
