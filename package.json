@@ -4,7 +4,7 @@
   "description": "Custom Web Element used as a notifications container that delivers messages to the user.",
   "main": "pd-bubble.js",
   "scripts": {
-    "test": "karma start --single-run --browsers Firefox,Edge karma.conf.js"
+    "test": "karma start --single-run --browsers Firefox karma.conf.js"
   },
   "keywords": [
     "toasts",
