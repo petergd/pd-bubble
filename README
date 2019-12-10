@@ -1,4 +1,4 @@
- # pd-bubble
+# pd-bubble
 
 A custom web component that can be used in web applications or websites. It provides a container for several types of messages to a user, such as "success", "error", "warning", "forbidden", "info", "help". There is also option to listen the message on browsers supporting SpeechSynthesis of the Web Speech API.
 
