@@ -6,9 +6,9 @@
   "scripts": {
     "test": "karma start --single-run --browsers Firefox karma.conf.js"
   },
-  "repository" : { 
-   "type" : "git",
-   "url" : "https://github.com/petergd/pd-bubble.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petergd/pd-bubble.git"
   },
   "keywords": [
     "toasts",
@@ -16,6 +16,16 @@
     "custom",
     "web",
     "elements"
+  ],
+  "bugs": { 
+    "url" : "https://github.com/petergd/pd-bubble.git/issues",
+    "email" : "pdarmis@gmail.com"
+  },
+  "files": [
+	"node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
+	"fonts/*",
+	"pd-bubble.js",
+	"index.html"
   ],
   "author": "Peter Darmis",
   "license": "MIT",
@@ -27,10 +37,11 @@
     "chai": "^4.2.0",
     "jasmine": "^3.5.0",
     "karma": "^4.4.1",
-    "karma-es6-shim": "^1.0.0",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
     "karma-edge-launcher": "^0.4.2",
+    "karma-es6-shim": "^1.0.0",
     "karma-firefox-launcher": "^1.2.0",
     "karma-jasmine": "^2.0.1",
     "karma-spec-reporter": "0.0.32",

@@ -19,6 +19,15 @@ module.exports = function(config) {
         random: false
       }
     },
+	plugins: [
+		"karma-chai",
+		"karma-jasmine",
+		"karma-chrome-launcher",
+		"karma-edge-launcher",
+		"karma-es6-shim",
+		"karma-firefox-launcher",
+		"karma-spec-reporter"
+	],
     exclude: [],
     preprocessors: {},
     reporters: ["spec"],

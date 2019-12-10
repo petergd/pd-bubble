@@ -34,12 +34,12 @@ export class pdBubble extends HTMLElement {
       this.delayTime = 0;
       this.fade = "up";
       this.initSpeechSynthesis();
-      this.bbIcons = '@font-face { font-family: "bubble-icons"; src: url("fonts/bubble-icons.eot"); src: url("fonts/bubble-icons.eot?#iefix") format("embedded-opentype"), url("fonts/bubble-icons.woff2") format("woff2"), url("fonts/bubble-icons.woff") format("woff"), url("fonts/bubble-icons.ttf")  format("truetype"), url("fonts/bubble-icons.svg#bubble-icons") format("svg"); font-weight: normal; font-style: normal; font-display: block; } .bubble-icon { font-family: "bubble-icons" !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; } .bubble-warning::before { content: "\e900"; } .bubble-forbidden::before { content: "\e901"; } .bubble-error::before {  content: "\e902"; } .bubble-info::before { content: "\e903"; } .bubble-help::before { content: "\e904"; } .bubble-success::before { content: "\e905"; }.bubble-warning.bubble-mic::before,.bubble-forbidden.bubble-mic::before,.bubble-error.bubble-mic::before,.bubble-info.bubble-mic::before,.bubble-help.bubble-mic::before,.bubble-success.bubble-mic::before { content: "\e906"; }';
+      this.bbIcons = '.bubble-icon { text-align: left; font-display: block; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; height: 1rem; width: 1rem; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; } .bubble-warning::before { content: "❕"; } .bubble-forbidden::before { content: "🚫"; } .bubble-error::before {  content: "💥"; } .bubble-info::before { content: "ℹ"; } .bubble-help::before { content: "🙏"; } .bubble-success::before { content: "👏"; }.bubble-warning.bubble-mic::before,.bubble-forbidden.bubble-mic::before,.bubble-error.bubble-mic::before,.bubble-info.bubble-mic::before,.bubble-help.bubble-mic::before,.bubble-success.bubble-mic::before { content: "🎙"; }';
       this.bbIconsStyle = document.querySelector("style#bubble-icons");
       if(this.bbIconsStyle == null || typeof this.bbIconsStyle == "undefined") {
           this.bbIconsStyle = document.createElement("style");
           this.bbIconsStyle.append(this.bbIcons); 
-      }
+	  }
       let style = this.bbIconsStyle.cloneNode(true);
       style.append('@keyframes up { 0% { opacity: 1; } 100% { opacity: 0; margin-top: -5%; } } @keyframes down { 0% { opacity: 1; } 100% { opacity: 0; margin-bottom: -5%; } }');
       this.sRoot.append(style);
