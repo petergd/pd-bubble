@@ -179,7 +179,7 @@ export class pdBubble extends HTMLElement {
     
     connectedCallback() {
       this.forceSpeakBubble = (this.getAttribute("speakit") == "true");
-      this.delayTime = parseInt(this.getAttribute("delay"));
+      this.delayTime = isNaN(parseInt(this.getAttribute("delay"))) ? 0 : parseInt(this.getAttribute("delay")) ;
     }
 
     disconnectedCallback() {
@@ -192,7 +192,7 @@ export class pdBubble extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (name == "delay") {
-            this.delayTime = parseInt(this.getAttribute("delay"));
+            this.delayTime = isNaN(parseInt(this.getAttribute("delay"))) ? 0 : parseInt(this.getAttribute("delay")) ;
         }
         if(name == "speakit") {
             this.forceSpeakBubble = (this.getAttribute("speakit") == "true");
