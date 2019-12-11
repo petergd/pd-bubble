@@ -1,6 +1,7 @@
 # pd-bubble
 
 A custom web component that can be used in web applications or websites. It provides a container for several types of messages to a user, such as "success", "error", "warning", "forbidden", "info", "help". There is also option to listen the message on browsers supporting SpeechSynthesis of the Web Speech API.
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-bubble)
 
 ## Getting Started
 
@@ -203,14 +204,102 @@ Additional `CSS` is used to position the messages container *pd-bubble*.
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="pd-bubble.html">
+    <style id="bubble-icons">
+    @font-face { 
+    font-family: 'bubble-icons';
+    src: url('fonts/bubble-icons.eot');
+    src: url('fonts/bubble-icons.eot?#iefix') format('embedded-opentype'), url('fonts/bubble-icons.woff2') format('woff2'), url('fonts/bubble-icons.woff') format('woff'), url('fonts/bubble-icons.ttf')  format('truetype'), url('fonts/bubble-icons.svg#bubble-icons') format('svg');
+    font-weight: normal; 
+    font-style: normal; 
+    font-display: block; 
+    }
+    .bubble-icon { 
+    font-family: 'bubble-icons' !important; 
+    speak: none; 
+    font-style: normal; 
+    font-weight: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+    } 
+    .bubble-warning::before { 
+    content: '\e900'; 
+    } 
+    .bubble-forbidden::before { 
+    content: '\e901'; 
+    } 
+    .bubble-error::before {  
+    content: '\e902'; 
+    } 
+    .bubble-info::before {  
+    content: '\e903'; 
+    } 
+    .bubble-help::before {  
+    content: '\e904'; 
+    } 
+    .bubble-success::before {  
+    content: '\e905'; 
+    }
+    .bubble-warning.bubble-mic::before,
+    .bubble-forbidden.bubble-mic::before,
+    .bubble-error.bubble-mic::before,
+    .bubble-info.bubble-mic::before,
+    .bubble-help.bubble-mic::before,
+    .bubble-success.bubble-mic::before { 
+    content: '\e906'; 
+    }
+    </style>
+    <style>
+    body {
+    width: 100%;
+    }
+    :host {
+    display: block;
+    }
+    pd-bubble:not(:defined) {
+    display: none;
+    }
+    pd-bubble,
+    pd-bubble:defined {
+    position: sticky;
+    width: 20%;
+    top: 0;
+    z-index: 99999;
+    float: right;
+    height: auto;
+    margin: 2% 5% 0% 70%;
+    display: block;
+    padding: 0;
+    }    
+    </style>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="pd-bubble.js"></script>
+    <script type="text/javascript">
+    customElements.whenDefined('pd-bubble').then(() => {
+      document.querySelector("pd-bubble:defined").setAttribute("text","warning#: Bubble container for a \"Warning\" message.");
+      document.querySelector("pd-bubble:defined").setAttribute("speakit",false);
+      document.querySelector("pd-bubble:defined").setAttribute("text","forbidden#: Bubble container for a \"Forbidden\" message.");
+      document.querySelector("pd-bubble:defined").setAttribute("speakit",true);
+      document.querySelector("pd-bubble:defined").setAttribute("text","error#: Bubble container for an \"Error\" message.");
+      document.querySelector("pd-bubble:defined").setAttribute("speakit",false);
+      document.querySelector("pd-bubble:defined").setAttribute("delay",1000);
+      document.querySelector("pd-bubble:defined").setAttribute("text","info#: Bubble container for an \"Info\" message.");
+      document.querySelector("pd-bubble:defined").setAttribute("delay",100);
+      document.querySelector("pd-bubble:defined").setAttribute("speakit",true);
+      document.querySelector("pd-bubble:defined").setAttribute("text","help#: Bubble container for a \"Help\" message.");
+      document.querySelector("pd-bubble:defined").setAttribute("text","success#: Bubble container for a \"Success\" message.");
+    });
+
+    </script>
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
-<pd-bubble></pd-bubble>
+<pd-bubble speakit="true" delay="3000" text=""></pd-bubble>
 ```
 
 ## Contributing
