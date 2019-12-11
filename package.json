@@ -1,6 +1,6 @@
 {
   "name": "pd-bubble",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Custom Web Element used as a notifications container that delivers messages to the user.",
   "main": "pd-bubble.js",
   "scripts": {
