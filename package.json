@@ -33,7 +33,6 @@
   "author": "Peter Darmis",
   "license": "MIT",
   "dependencies": {
-    "np": "^5.2.1"
   },
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.0",
