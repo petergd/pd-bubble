@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-`$ npm install @github/pd-bubble`
+`$ npm install pd-bubble`
 
 ## Running the tests
 
@@ -199,13 +199,27 @@ Additional `CSS` is used to position the messages container *pd-bubble*.
     }	
     </style>
 
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="pd-bubble.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<pd-bubble></pd-bubble>
+```
+
 ## Contributing
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+5. Submit a pull request 😁
 
 ## License
 

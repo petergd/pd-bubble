@@ -82,9 +82,15 @@ padding: 0;
 <script type="text/javascript">
 customElements.whenDefined('pd-bubble').then(() => {
   document.querySelector("pd-bubble:defined").setAttribute("text","warning#: Bubble container for a \"Warning\" message.");
+  document.querySelector("pd-bubble:defined").setAttribute("speakit",false);
   document.querySelector("pd-bubble:defined").setAttribute("text","forbidden#: Bubble container for a \"Forbidden\" message.");
+  document.querySelector("pd-bubble:defined").setAttribute("speakit",true);
   document.querySelector("pd-bubble:defined").setAttribute("text","error#: Bubble container for an \"Error\" message.");
+  document.querySelector("pd-bubble:defined").setAttribute("speakit",false);
+  document.querySelector("pd-bubble:defined").setAttribute("delay",1000);
   document.querySelector("pd-bubble:defined").setAttribute("text","info#: Bubble container for an \"Info\" message.");
+  document.querySelector("pd-bubble:defined").setAttribute("delay",100);
+  document.querySelector("pd-bubble:defined").setAttribute("speakit",true);
   document.querySelector("pd-bubble:defined").setAttribute("text","help#: Bubble container for a \"Help\" message.");
   document.querySelector("pd-bubble:defined").setAttribute("text","success#: Bubble container for a \"Success\" message.");
 });
