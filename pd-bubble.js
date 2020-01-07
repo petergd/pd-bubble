@@ -205,4 +205,7 @@ export class pdBubble extends HTMLElement {
         }
     }
 }
-customElements.define('pd-bubble', pdBubble);
+if (!window.customElements.get('pd-bubble')) {
+  window.pdBubble = pdBubble;
+  window.customElements.define('pd-bubble', pdBubble);
+}

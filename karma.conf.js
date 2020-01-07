@@ -4,7 +4,7 @@ module.exports = function(config) {
   config.set({
     basePath: "",
     urlRoot: "/pd-bubble/",
-    baseURL: "http://10.10.10.5:9876/",
+    baseURL: "http://localhost:9876/",
     frameworks: ["jasmine","chai"],
     files: [
         { pattern: "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js", included: false },
