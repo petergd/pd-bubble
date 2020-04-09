@@ -8,7 +8,6 @@ module.exports = function(config) {
     frameworks: ["jasmine","chai"],
     files: [
         { pattern: "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js", included: false },
-        { pattern: "fonts/*", watched: false, included: false, served: true, nocache: false },
         { pattern: "tests/*.html", watched:false, served:true, included:false },
         { pattern: "tests/*.test.js", watched:true, type: "module", included: true },
         { pattern: "test-utils.js", type: "module", included: false },

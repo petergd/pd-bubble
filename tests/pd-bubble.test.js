@@ -39,9 +39,9 @@ describe("pd-bubble", () => {
     });
   });
   describe("bbIcons", () => {
-    it("check that string holds certain CSS rules relative to the @font-face declaration", () => {
+    it("check that string holds certain CSS rules", () => {
         const component = new pdBubble();
-        const rgxp = new RegExp('((@font\-face|font\-display|font\-family:|icons|icon|font\-style:|font\-variant:|font\-weight:|.bubble-|::before|content:.+([(\".\")])))|([url("])+(.)+(.ttf|.woff|.woff2|.svg|.eot)+([")])|([format("])+(woff|embedded-opentype|truetype|woff2|svg)+([")])+','g');
+        const rgxp = new RegExp('((\.bubble-.[\w]+|:after|:before|::after|::before|content:.+))|([")])+([")])+','g');
         expect(rgxp.test(component.bbIcons)).toBe(true);
     });
   });
@@ -101,9 +101,9 @@ describe("pd-bubble", () => {
     });
   }); 
   describe("getColors()", () => {
-    it('Get foreground and background colors of the message bubble on type "help"', () => {
+    it('Get foreground and background colors of the message bubble on type "tag"', () => {
         const component = new pdBubble();
-        let colors = component.getColors("help");
+        let colors = component.getColors("tag");
         expect(colors).toEqual({ color: '#000', bgColor: '#dddddd' });
     });
   }); 
@@ -136,9 +136,9 @@ describe("pd-bubble", () => {
     });
   });
   describe("bubble()", () => {
-    it('Creates a message bubble of type - help', async () => {
+    it('Creates a message bubble of type - tag', async () => {
         const component = new pdBubble();
-        let bubble = await component.bubble("this is a help message", "help", false);
+        let bubble = await component.bubble("this is a help message", "tag", false);
         expect(bubble).toBeTrue();
     });
   });

@@ -1,9 +1,9 @@
 # pd-bubble
 
-A custom web component that can be used in web applications or websites. It provides a container for several types of messages to a user, such as "success", "error", "warning", "forbidden", "info", "help". There is also option to listen the message on browsers supporting SpeechSynthesis of the Web Speech API.
+A custom web component that can be used in web applications or websites. It provides a container for several types of messages to a user, such as "success", "error", "warning", "forbidden", "info", "tag" and more. Almost all message icons are based upon [iconocss](https://saeedalipoor.github.io/icono/). There is also option to listen the message on browsers supporting SpeechSynthesis of the Web Speech API.
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-bubble)
 
-[Demo page (by unpkg.com)](https://unpkg.com/pd-bubble@1.0.5/pd-bubble.html)
+[Demo page (by unpkg.com)](https://unpkg.com/pd-bubble@1.0.8/pd-bubble.html)
 
 ## Getting Started
 
@@ -49,7 +49,7 @@ _**bbIcons**_
 
 _✓ @font-face string containing the appropriate CSS for the icon fonts used_
 
-_✓ check that string holds certain CSS rules relative to the @font-face declaration_
+_✓ check that string holds certain CSS rules_
 
 _**sRoot**_
 
@@ -73,7 +73,7 @@ _✓ Get foreground and background colors of the message bubble on type "error"_
 
 _✓ Get foreground and background colors of the message bubble on type "info"_
 
-_✓ Get foreground and background colors of the message bubble on type "help"_
+_✓ Get foreground and background colors of the message bubble on type "tag"_
 
 _✓ Get foreground and background colors of the message bubble on type "success"_
 
@@ -85,7 +85,7 @@ _✓ Creates a message bubble of type - error_
 
 _✓ Creates a message bubble of type - forbidden_
 
-_✓ Creates a message bubble of type - help_
+_✓ Creates a message bubble of type - tag_
 
 _✓ Creates a message bubble of type - info_
 
@@ -121,60 +121,9 @@ To display various messages simply add the type followed by `#:`, in front of th
         document.querySelector("pd-bubble:defined").setAttribute("text","forbidden#: Bubble container for a \"Forbidden\" message.");  
         document.querySelector("pd-bubble:defined").setAttribute("text","error#: Bubble container for an \"Error\" message."); 
         document.querySelector("pd-bubble:defined").setAttribute("text","info#: Bubble container for an \"Info\" message.");  
-        document.querySelector("pd-bubble:defined").setAttribute("text","help#: Bubble container for a \"Help\" message.");  
+        document.querySelector("pd-bubble:defined").setAttribute("text","tag#: Bubble container for a \"Tag\" message.");  
         document.querySelector("pd-bubble:defined").setAttribute("text","success#: Bubble container for a \"Success\" message.");
-    });
-
-In addition `CSS` from index.html page of this project will be needed to be added as it is. If not provided then unicode emojis will be used instead of custom font icons. 
-
-    <style id="bubble-icons">
-    @font-face { 
-        font-family: 'bubble-icons';
-        src: url('fonts/bubble-icons.eot');
-        src: url('fonts/bubble-icons.eot?#iefix') format('embedded-opentype'), url('fonts/bubble-icons.woff2') format('woff2'), url('fonts/bubble-icons.woff') format('woff'), url('fonts/bubble-icons.ttf')  format('truetype'), 
-        url('fonts/bubble-icons.svg#bubble-icons') format('svg');
-        font-weight: normal; 
-        font-style: normal; 
-        font-display: block; 
-    }
-    .bubble-icon { 
-        font-family: 'bubble-icons' !important; 
-        speak: none; 
-        font-style: normal; 
-        font-weight: normal; 
-        font-variant: normal; 
-        text-transform: none; 
-        line-height: 1; 
-        -webkit-font-smoothing: antialiased; 
-        -moz-osx-font-smoothing: grayscale; 
-    } 
-    .bubble-warning::before { 
-        content: '\e900'; 
-    } 
-    .bubble-forbidden::before { 
-        content: '\e901'; 
-    } 
-    .bubble-error::before {  
-        content: '\e902'; 
-    } 
-    .bubble-info::before {  
-        content: '\e903'; 
-    } 
-    .bubble-help::before {  
-        content: '\e904'; 
-    } 
-    .bubble-success::before {  
-        content: '\e905'; 
-    }
-    .bubble-warning.bubble-mic::before,
-    .bubble-forbidden.bubble-mic::before,
-    .bubble-error.bubble-mic::before,
-    .bubble-info.bubble-mic::before,
-    .bubble-help.bubble-mic::before,
-    .bubble-success.bubble-mic::before { 
-        content: '\e906'; 
-    }
-    </style>
+    });  
 
 Additional `CSS` is used to position the messages container *pd-bubble*.
 
