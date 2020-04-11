@@ -1,6 +1,6 @@
 {
   "name": "pd-bubble",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Custom Web Element used as a notifications container that delivers messages to the user.",
   "main": "pd-bubble.js",
   "scripts": {
@@ -31,9 +31,10 @@
   ],
   "author": "Peter Darmis",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+	  "@webcomponents/webcomponentsjs": "^2.4.2"
+  },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.2",
     "chai": "^4.2.0",
     "jasmine": "^3.5.0",
     "karma": "^4.4.1",
@@ -46,5 +47,18 @@
     "karma-jasmine": "^2.0.1",
     "karma-spec-reporter": "0.0.32",
     "puppeteer": "^2.0.0"
+  },
+  "homepage": "https://github.com/petergd/pd-bubble#readme",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
   }
 }
