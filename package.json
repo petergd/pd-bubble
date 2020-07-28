@@ -22,7 +22,6 @@
     "email": "11849215+petergd@users.noreply.github.com"
   },
   "files": [
-    "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
     "tests/test.html",
     "test-utils.js",
     "tests/pd-bubble.test.js",
