@@ -1,6 +1,6 @@
 {
   "name": "pd-bubble",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Custom Web Element used as a notifications container that delivers messages to the user.",
   "main": "pd-bubble.js",
   "scripts": {
@@ -30,11 +30,10 @@
   ],
   "author": "Peter Darmis",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
     "jasmine": "^3.6.1",
-    "karma": "^4.4.1",
+    "karma": "^6.3.2",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
