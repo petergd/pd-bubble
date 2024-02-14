@@ -3,7 +3,7 @@
 A custom web component that can be used in web applications or websites. It provides a container for several types of messages to a user, such as "success", "error", "warning", "forbidden", "info", "tag" and more. Almost all message icons are based upon [iconocss](https://saeedalipoor.github.io/icono/). There is also option to listen the message on browsers supporting SpeechSynthesis of the Web Speech API.
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-bubble)
 
-[Demo page (by unpkg.com)](https://unpkg.com/pd-bubble@1.0.8/pd-bubble.html)
+[Demo page (by unpkg.com)](https://unpkg.com/pd-bubble@1.1.3/pd-bubble.html)
 
 ## Getting Started
 
